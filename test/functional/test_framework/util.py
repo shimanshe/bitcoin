@@ -15,6 +15,7 @@ import os
 import re
 import time
 import unittest
+from binascii import unhexlify
 
 from . import coverage
 from .authproxy import AuthServiceProxy, JSONRPCException
@@ -614,6 +615,17 @@ def modinv(a, n):
     if t1 < 0:
         t1 += n
     return t1
+
+def count_bytes(hex_string):
+    return len(bytearray.fromhex(hex_string))
+
+
+def hex_str_to_bytes(hex_str):
+    return unhexlify(hex_str.encode('ascii'))
+
+
+def str_to_b64str(string):
+    return b64encode(string.encode('utf-8')).decode('ascii')
 
 class TestFrameworkUtil(unittest.TestCase):
     def test_modinv(self):
