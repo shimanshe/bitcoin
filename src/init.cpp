@@ -1823,9 +1823,9 @@ bool AppInitMain(NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip_info)
 
     connOptions.m_i2p_accept_incoming = args.GetBoolArg("-i2pacceptincoming", true);
 
-    if (!node.connman->Start(*node.scheduler, connOptions)) {
-        return false;
-    }
+    // if (!node.connman->Start(*node.scheduler, connOptions)) {
+    //     return false;
+    // }
 
     // ********************************************************* Step 13: finished
 

@@ -152,3 +152,10 @@ dist/
 /guix-build-*
 
 /ci/scratch/
+.idea/.gitignore
+.idea/bitcoin.iml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+src/test_bitcoin
